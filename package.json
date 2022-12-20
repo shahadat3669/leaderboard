@@ -1,0 +1,27 @@
+{
+  "name": "leaderboard",
+  "version": "1.0.0",
+  "description": "The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahadat3669/leaderboard.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "webpack",
+    "ES6",
+    "api"
+  ],
+  "author": "Shahadat Hossain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shahadat3669/leaderboard/issues"
+  },
+  "homepage": "https://github.com/shahadat3669/leaderboard#readme"
+}
