@@ -217,3 +217,24 @@ main {
     color: $white;
   }
 }
+
+.recent-score {
+  &-top {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  &-list {
+    border: 1px solid $blue-dark;
+  }
+
+  &-item {
+    padding: 8px;
+
+    &:nth-child(odd) {
+      background-color: $gray_1;
+    }
+  }
+}
