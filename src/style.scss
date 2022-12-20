@@ -196,6 +196,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
   & > div {
     flex-basis: 45%;
   }
@@ -203,6 +204,7 @@ main {
 
 .p {
   padding: 1px;
+
   &-48 {
     padding: 48px;
   }
@@ -212,6 +214,7 @@ main {
   padding: 8px 16px;
   border: 1px solid $blue-dark;
   cursor: pointer;
+
   &:hover {
     background-color: $blue-dark;
     color: $white;
