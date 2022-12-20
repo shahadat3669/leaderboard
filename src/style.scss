@@ -238,3 +238,20 @@ main {
     }
   }
 }
+
+.add-score {
+  &-top {
+    margin-bottom: 32px;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 60%;
+  }
+
+  &-btn {
+    align-self: flex-end;
+  }
+}
