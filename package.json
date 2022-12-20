@@ -4,7 +4,8 @@
   "description": "The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.",
   "main": "dist/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hint": "npx hint ."
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/shahadat3669/leaderboard/issues"
   },
-  "homepage": "https://github.com/shahadat3669/leaderboard#readme"
+  "homepage": "https://github.com/shahadat3669/leaderboard#readme",
+  "devDependencies": {
+    "hint": "^7.1.3"
+  }
 }
