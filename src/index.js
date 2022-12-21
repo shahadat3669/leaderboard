@@ -10,12 +10,13 @@ const refreshScoresBtn = document.querySelector('#refreshScoresBtn');
 addScoreForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const data = new FormData(e.target);
-  const newScore = new Score({
-    user: data.get('user'),
-    score: data.get('score'),
-  });
-  addDataToApi(newScore);
-  addScoreForm.reset();
+  const user = data.get('user');
+  const score = data.get('score');
+  if (user && score) {
+    const newScore = new Score({ user, score });
+    addDataToApi(newScore);
+    addScoreForm.reset();
+  }
 });
 
 refreshScoresBtn.addEventListener('click', async (e) => {
