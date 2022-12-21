@@ -232,7 +232,7 @@ main {
   &-list {
     border: 1px solid $blue-dark;
     max-height: 48vh;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   &-item {
