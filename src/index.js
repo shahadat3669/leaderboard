@@ -15,6 +15,7 @@ addScoreForm.addEventListener('submit', (e) => {
     score: data.get('score'),
   });
   addDataToApi(newScore);
+  addScoreForm.reset();
 });
 
 refreshScoresBtn.addEventListener('click', async (e) => {
