@@ -5,6 +5,7 @@ import Score from './modules/Score.js';
 
 const scoreList = document.querySelector('#scoreList');
 const addScoreForm = document.querySelector('#addScoreForm');
+const refreshScoresBtn = document.querySelector('#refreshScoresBtn');
 
 addScoreForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -14,6 +15,11 @@ addScoreForm.addEventListener('submit', (e) => {
     score: data.get('score'),
   });
   addDataToApi(newScore);
+});
+
+refreshScoresBtn.addEventListener('click', async (e) => {
+  e.preventDefault();
+  generateLeaderBoard(scoreList);
 });
 
 window.addEventListener('DOMContentLoaded', generateLeaderBoard(scoreList));
