@@ -1,4 +1,4 @@
-import { getData } from './api.js';
+import { getData, postData } from './api.js';
 
 const generateLeaderBoard = async (scoreList) => {
   scoreList.innerHTML = '';
@@ -15,4 +15,13 @@ const generateLeaderBoard = async (scoreList) => {
   }
 };
 
-export { generateLeaderBoard };
+const addDataToApi = async (scoreData) => {
+  let status = false;
+  const response = await postData(scoreData);
+  if (response.result === 'Leaderboard score created correctly.') {
+    status = true;
+  }
+  return status;
+};
+
+export { generateLeaderBoard, addDataToApi };
