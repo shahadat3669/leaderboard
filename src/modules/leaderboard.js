@@ -1,11 +1,14 @@
 import { getData, postData } from './api.js';
 
+const sortItemsByScore = (items) => items.sort((a, b) => b.score - a.score);
+
 const generateLeaderBoard = async (scoreList) => {
   scoreList.innerHTML = '';
   const response = await getData();
   let generateHtml = '';
   if (response.result.length > 0) {
-    response.result.forEach((scoreItem) => {
+    const sortedItems = sortItemsByScore(response.result);
+    sortedItems.forEach((scoreItem) => {
       generateHtml += `<li class="recent-score-item">${scoreItem.user}: ${scoreItem.score}</li>`;
     });
     scoreList.innerHTML = generateHtml;
