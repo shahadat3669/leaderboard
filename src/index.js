@@ -12,6 +12,7 @@ addScoreForm.addEventListener('submit', (e) => {
   const data = new FormData(e.target);
   const user = data.get('user');
   const score = data.get('score');
+
   if (user && score) {
     const newScore = new Score({ user, score });
     addDataToApi(newScore);
