@@ -223,6 +223,21 @@ main {
     background-color: $blue-dark;
     color: $white;
   }
+
+  &-refresh {
+    animation: moveInBottom 0.5s ease-out;
+    animation-fill-mode: forwards;
+
+    &:hover {
+      box-shadow: $shadowMedium;
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      box-shadow: $shadowSmall;
+      transform: translateY(-1px);
+    }
+  }
 }
 
 .recent-score {
