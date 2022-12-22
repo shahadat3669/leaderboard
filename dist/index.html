@@ -14,11 +14,7 @@
         <div class="recent-score">
           <div class="recent-score-top">
             <h2 class="recent-score-title title">Recent scores</h2>
-            <button
-              class="btn btn-recent-score"
-              id="refreshScoresBtn"
-              type="button"
-            >
+            <button class="btn btn-refresh" id="refreshScoresBtn" type="button">
               Refresh
             </button>
           </div>
@@ -29,14 +25,21 @@
             <h2 class="add-score-title title">Add your score</h2>
           </div>
           <form method="post" class="add-score-form" id="addScoreForm">
-            <input type="text" name="user" placeholder="Your name" required />
             <input
+              class="add-score-form-field p-8"
+              type="text"
+              name="user"
+              placeholder="Your name"
+              required
+            />
+            <input
+              class="add-score-form-field p-8"
               type="number"
               name="score"
               placeholder="Your score"
               required
             />
-            <button class="btn add-score-btn" type="submit">Submit</button>
+            <button class="btn btn-add-score" type="submit">Submit</button>
           </form>
         </div>
       </div>

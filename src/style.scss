@@ -203,7 +203,9 @@ main {
 }
 
 .p {
-  padding: 1px;
+  &-8 {
+    padding: 8px;
+  }
 
   &-48 {
     padding: 48px;
@@ -214,10 +216,43 @@ main {
   padding: 8px 16px;
   border: 1px solid $blue-dark;
   cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
 
   &:hover {
     background-color: $blue-dark;
     color: $white;
+  }
+
+  &-refresh {
+    animation: moveInBottom 0.5s ease-out;
+    animation-fill-mode: forwards;
+
+    &:hover {
+      box-shadow: $shadowMedium;
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      box-shadow: $shadowSmall;
+      transform: translateY(-1px);
+    }
+  }
+
+  &-add-score {
+    animation: moveInBottom 0.5s ease-out;
+    align-self: flex-end;
+    animation-fill-mode: backwards;
+
+    &:hover {
+      box-shadow: $shadowMedium;
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      box-shadow: $shadowSmall;
+      transform: translateY(-1px);
+    }
   }
 }
 
@@ -227,6 +262,7 @@ main {
     align-items: center;
     gap: 24px;
     margin-bottom: 32px;
+    position: relative;
   }
 
   &-list {
@@ -254,9 +290,21 @@ main {
     flex-direction: column;
     gap: 24px;
     width: 60%;
+
+    &-field {
+      border: 1px solid $blue-dark;
+    }
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
 
-  &-btn {
-    align-self: flex-end;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
