@@ -238,6 +238,22 @@ main {
       transform: translateY(-1px);
     }
   }
+
+  &-add-score {
+    animation: moveInBottom 0.5s ease-out;
+    align-self: flex-end;
+    animation-fill-mode: backwards;
+
+    &:hover {
+      box-shadow: $shadowMedium;
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      box-shadow: $shadowSmall;
+      transform: translateY(-1px);
+    }
+  }
 }
 
 .recent-score {
